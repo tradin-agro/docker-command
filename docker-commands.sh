@@ -208,7 +208,10 @@ docker compose
 # o nome da bridge deve ser compose-bridge no .yml e -d se não quiser ver a execução
 # com logs ao baixar usando ctrl+c não remove a rede
 docker compose up
-ocker compose up -d
+docker compose up -d
+
+# levanta docker compose dando build em tudo
+docker compose up --build
 
 # mostra os serviços criados com o docker compose
 docker compose ps
@@ -216,4 +219,8 @@ docker compose ps
 # remove os containers e rede criada entre eles 
 docker compose down
 
+# Comando Linux mostrar portas ocupadas
+sudo lsof -i -P -n | grep LISTEN
 
+# Comando Linux matar processo
+sudo kill $processoId
