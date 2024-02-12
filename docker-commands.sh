@@ -113,6 +113,9 @@ docker tag nomedaimagem/app-node:1.0 giovannibiffi/app-node:1.0
 # Remover todas as imagens, forçando a remoção
 docker rmi $(docker image ls -aq) --force
 
+# remover todos os volumes do docker
+docker volume rm $(docker volume ls -q) --force
+
 # Executar um docker do ubuntu em modo interativo usando o bash (só ficará disponível durante a execução do bash)
 docker run -it ubuntu bash
 
